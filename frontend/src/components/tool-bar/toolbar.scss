@@ -1,0 +1,33 @@
+@import '../../styles/ui-misc';
+@import '../../styles/ui-colors';
+
+.toolbar {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  background-color: $color-brand-1;
+  padding: $spacing-ui-xSmall $spacing-ui-medium;
+  border-radius: $borderRadius-default;
+  opacity: 0.5;
+  min-width: 800px;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+      opacity: 1;
+  }
+
+  &-text,
+  &-icon {
+      vertical-align: middle;
+      display: inline-block;
+  }
+
+  &-text {
+      margin-left: $spacing-ui-xSmall;
+      color: $color-neutral-1;
+      font-weight: 700;
+  }
+}

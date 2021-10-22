@@ -1,0 +1,55 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9d9d9d;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+::-moz-selection {
+  background-color: #371ee1;
+  color: #eee;
+}
+
+::selection {
+  background-color: #371ee1;
+  color: #eee;
+}
+/*# sourceMappingURL=app.css.map */

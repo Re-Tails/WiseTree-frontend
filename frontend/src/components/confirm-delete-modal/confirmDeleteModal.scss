@@ -1,0 +1,19 @@
+.centered {
+    margin: 0 auto;
+
+}
+
+.close {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.close:focus {
+    outline: none;
+    box-shadow: none;
+  
+}
+
+.modal-header {
+    border-bottom: none !important;
+}

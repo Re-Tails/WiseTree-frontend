@@ -1,0 +1,156 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.login {
+    background-color: $color-brand-1;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+
+    &__title-section {
+        position: relative;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__gradient {
+        position: absolute;
+        width: 70%;
+        max-width: 1000px;
+        height: auto;
+
+        &--top {
+            top: 0;
+            right: 0;
+            transform: rotateZ(180deg);
+        }
+
+        &--bottom {
+            bottom: 0;
+            left: 0;
+        }
+
+    }
+
+    &__logo {
+        max-width: 600px;
+        margin-bottom: 3rem;
+    }
+
+    &__subtitle {
+        color: #fff;
+        font-weight: 400;
+    }
+
+    &__login-section {
+        flex: 0 0 30rem;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 0 4.5rem;
+    }
+
+    &__login-section-title {
+        color: $color-neutral-5;
+        margin-bottom: 1rem;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    &__login-section-error {
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        font-size: 1.1rem;
+        padding: .5rem 1rem;
+        color: $color-neutral-5;
+        border: 1px solid $color-neutral-3;
+        border-radius: .3rem;
+        align-self: stretch;
+        
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__email {
+        
+    }
+
+    &__password {
+        
+    }
+
+    &__btn {
+        font-size: $fontSize-heading-4;
+        background-color: $color-brand-3;
+        color: #fff;
+        padding: .75rem 0;
+        align-self: stretch;
+        box-shadow: 0 1rem 2rem rgba(#000, .25);
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-brand-2;
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(#000, .2);
+        }
+
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 1rem 2rem rgba(#000, .2);
+        }
+
+        &:focus {
+            box-shadow: 0 1rem 2rem rgba(#000, .25);
+            outline: none;
+        }
+
+    }
+
+
+
+    // &-welcomeCard {
+    //     background-color: $color-neutral-1;
+    //     margin: 0 auto;
+    //     max-width: 600px;
+    //     padding: $spacing-ui-xxLarge;
+
+    //     &-message {
+    //         color: $color-text-1;
+    //         font-size: $fontSize-heading-3;
+    //         font-weight: 400;
+    //         margin: 0 0 $spacing-ui-xLarge;
+    //         text-align: center;
+    //     }
+
+    //     &-loginButton {
+    //         background-color: $color-brand-3;
+    //         color: $color-neutral-1;
+    //         display: block;
+    //         margin: auto;
+    //         padding: $spacing-ui-small 0;
+    //         text-align: center;
+    //         width: 300px;
+    //     }
+    // }
+}

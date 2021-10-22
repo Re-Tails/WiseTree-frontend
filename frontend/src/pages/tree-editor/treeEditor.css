@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+.treeEditor {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.treeEditor__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  min-height: 0;
+}
+
+.treeEditor-canvas {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.treeEditor-wordCloud {
+  overflow: hidden;
+  left: 0px;
+  top: 80px;
+  position: absolute;
+  z-index: 50;
+  margin: 1%;
+}
+
+.treeEditor-wordCloud-icon {
+  overflow: hidden;
+  left: 500px;
+  top: 40px;
+  position: fixed;
+  z-index: 99;
+}
+
+.treeEditor-formWrapper {
+  overflow: hidden;
+  margin: 100px auto;
+}
+
+.link {
+  stroke: #b4b4b4;
+  fill: none;
+  stroke-width: 2;
+}
+
+.descriptionNode {
+  margin-top: 10px;
+}
+
+.labelText {
+  cursor: pointer;
+  height: 100%;
+  line-height: 1.0;
+  overflow: hidden;
+  padding: 8px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tacticsText {
+  cursor: pointer;
+  height: 100%;
+  line-height: 1.2;
+  max-height: 135px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+  white-space: pre-line;
+  z-index: 999;
+  font-size: 11px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.descriptionText {
+  cursor: pointer;
+  height: 100%;
+  line-height: 1.2;
+  max-height: 135px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+  white-space: pre-line;
+  font-size: 11px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button {
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.tree {
+  background-color: #5e4eca;
+}
+
+.horizon {
+  background-color: #b83a3a;
+}
+
+.injection {
+  background-color: #e09f2e;
+}
+
+.lever {
+  background-color: #0b664cbd;
+}
+
+.strategy {
+  background-color: #1d68b3;
+}
+
+.tactic {
+  background-color: #f2f2f2;
+}
+
+.entityTypeButton {
+  display: inline-block;
+  min-width: 80px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: white;
+}
+
+.entityTypeButtonTactic {
+  display: inline-block;
+  min-width: 80px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: black;
+}
+/*# sourceMappingURL=treeEditor.css.map */

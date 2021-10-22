@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AGAA,OAAO,CAAC,kHAAI;AHKZ,AAEI,cAFU,CAER,EAAE,CAAC;EACD,aAAa,EAAE,CAAC;CACnB;;AAMA,AAAD,gCAAmB,CAAC;EAChB,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "TeamDiagrams.scss",
+        "../../styles/_ui-colors.scss",
+        "../../styles/_ui-misc.scss",
+        "../../styles/_ui-text.scss"
+    ],
+    "names": [],
+    "file": "TeamDiagrams.css"
+}

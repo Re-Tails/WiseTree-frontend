@@ -1,0 +1,39 @@
+@import '../../styles/ui-misc';
+
+// .tree-dashboard {
+//     display: flex;
+//     flex-direction: column;
+//     height: 100vh;
+//     flex: 1 1 auto;
+//     overflow-y: hidden;
+
+//     &__content-wrapper{
+//         display: flex;
+//         height: 100%;
+//         flex: 1 1 100%;
+//     }
+    
+//     &__content {
+//         background-color: #F5F7FF;
+//         display: flex;
+//         flex-direction: column;
+//         flex: 1 1 auto;
+//         overflow-y: scroll;
+//         padding: $spacing-ui-xxLarge;
+//     }
+// }
+
+.tree-dashboard {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+
+    &__content {
+        overflow-y: scroll;
+        background-color: #F5F7FF;
+        padding: $spacing-ui-xxLarge;
+    }
+
+}

@@ -1,0 +1,51 @@
+@-webkit-keyframes loadingLayout {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingLayout {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loadingLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.loadingLayout::before {
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid #ccc;
+  border-top-color: #1d1765;
+  -webkit-animation: loadingLayout 1s linear infinite;
+          animation: loadingLayout 1s linear infinite;
+}
+
+.loadingLayout.page-content::before {
+  left: 60%;
+}
+/*# sourceMappingURL=loadingLayout.css.map */

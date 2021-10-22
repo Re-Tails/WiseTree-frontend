@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AGAA,OAAO,CAAC,kHAAI;AHIZ,AAAA,YAAY,CAAC;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,IAAI,EAAE,QAAQ;CAcjB;;AAZI,AAAD,yBAAc,CAAC;EACX,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,WAAW;EACnB,KAAK,EAAE,KAAK;CACf;;AAEA,AAAD,iBAAM,CAAC;EACH,KAAK,ECnBG,OAAO;EDoBf,SAAS,EGlBI,IAAI;EHmBjB,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "errorLayout.scss",
+        "../../styles/_ui-colors.scss",
+        "../../styles/_ui-misc.scss",
+        "../../styles/_ui-text.scss"
+    ],
+    "names": [],
+    "file": "errorLayout.css"
+}

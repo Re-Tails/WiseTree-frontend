@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+.viewing-grid {
+  margin-bottom: .5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (auto)[7];
+      grid-template-rows: repeat(7, auto);
+  grid-gap: .7rem .4rem;
+}
+
+.viewing-grid__viewing-item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.viewing-grid__viewing-item--entity {
+  color: #fff;
+}
+
+.viewing-grid__name {
+  grid-column: 1 / -1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewing-grid__description {
+  grid-column: 1 / -1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewing-grid__tactic {
+  grid-column: 1 / -1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewing-grid__detail {
+  grid-column: 1 / -1;
+}
+
+.viewing-grid__detail > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.viewing-grid__label {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.viewing-grid__data {
+  font-size: .9rem;
+}
+/*# sourceMappingURL=viewNode.css.map */

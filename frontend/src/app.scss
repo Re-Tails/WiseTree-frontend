@@ -1,0 +1,145 @@
+@import "./styles/ui-colors";
+
+// Global styling to be declared here
+// html,
+// body,
+// #root {
+//     height: 100%;
+// }
+
+html {
+    font-size: 100%; // 1rem = 16px
+
+    // font-size: 62.5%; // 1rem = 10px
+
+    // Font size is generally set to 62.5% which changes 1rem to 10px which is much easier to work with. However, we'll leave it as is.
+    //      e.g. If you want something to be 100px (Using px these days is a low standard), set it to 10rem.
+}
+
+body {
+    // overflow: auto;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    // line-height: 1.6;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 12px;
+    // background-color: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-neutral-3; 
+    border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+::selection {
+    // background-color: $color-brand-2;
+    background-color: #371ee1;
+    color: $color-neutral-2;
+}
+
+// -ms-overflow-style: none;
+// scrollbar-width: none;
+
+// &::-webkit-scrollbar {
+//     display: none;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CSS Reset for HTML elements: https://www.w3schools.com/cssref/css_default_values.asp
+// body,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// dialog,
+// img,
+// ul,
+// ol,
+// button {
+//     margin: 0;
+//     border: 0;
+//     padding: 0;
+// }
+
+// button {
+//     border: 0;
+
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+// ul,
+// ol {
+//     list-style: none;
+// }
+
+// img {
+//     display: block;
+
+//     a & {
+//         border: 0;
+//     }
+// }
+
+// a {
+//     color: unset;
+//     text-decoration: unset;
+// }

@@ -1,0 +1,60 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.statusDropdown {
+    position: relative;
+
+    &-options {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        background-color: $color-neutral-1;
+        border: $border-default;
+
+        &-button {
+            display: block;
+            width: 100%;
+            background-color: inherit;
+            font-size: $fontSize-button;
+            line-height: $lineHeight-loose;
+            text-align: left;
+            padding: 5px $spacing-ui-large;
+
+            &[value='published'],
+            &[value='draft'] {
+                &:hover,
+                &:focus {
+                    background-color: $color-brand-3;
+                    color: $color-neutral-1;
+                }
+            }
+
+            &[value='archived'] {
+                &:hover,
+                &:focus {
+                    background-color: $color-neutral-4;
+                    color: $color-neutral-1;
+                }
+            }
+        }
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
+    &-ellipsis {
+        border-radius: 4px;
+        display: block;
+        fill: $color-neutral-3;
+        margin-left: $spacing-ui-xxSmall;
+
+        &:hover,
+        &:focus {
+            background-color: $color-neutral-2;
+            fill: $color-brand-3;
+        }
+    }
+}

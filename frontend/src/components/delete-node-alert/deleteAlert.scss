@@ -1,0 +1,58 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.deleteDialog {
+    background-color: $color-neutral-1;
+    padding: $spacing-ui-large;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .3);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-label {
+        margin-bottom: $spacing-ui-small;
+        text-align: center;
+        flex: 0;
+    }
+
+    &__text-highlight {
+        font-weight: 700;
+        color: $color-brand-1;
+    }
+
+    &-buttonGroup {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 1.5rem;
+
+        &--cancel,
+        &--delete {
+            padding: $spacing-ui-xxSmall $spacing-ui-xLarge;
+            border-radius: $borderRadius-default;
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        &--cancel {
+            background-color: $color-brand-3;
+        }
+        &--delete {
+            background-color: #ff0000;
+        }
+    }
+}
+
+.delete-dialog-background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    backdrop-filter: brightness(.7);
+}

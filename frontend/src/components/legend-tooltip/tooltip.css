@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+.card__color-legend {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  z-index: 50;
+  bottom: 2rem;
+  right: 2rem;
+  width: 12.5rem;
+  background-color: #eee;
+  padding: 1rem;
+  opacity: 1;
+}
+
+.card__color-legend__key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__color-legend__box {
+  width: 4rem;
+  height: 1.3rem;
+}
+
+.card__color-legend__label {
+  width: 5rem;
+}
+
+.card__color-legend__tree {
+  background-color: #5e4eca;
+}
+
+.card__color-legend__strategy {
+  background-color: #1d68b3;
+}
+
+.card__color-legend__lever {
+  background-color: #0b664cbd;
+}
+
+.card__color-legend__horizon {
+  background-color: #b83a3a;
+}
+
+.card__color-legend__injection {
+  background-color: #e09f2e;
+}
+/*# sourceMappingURL=tooltip.css.map */

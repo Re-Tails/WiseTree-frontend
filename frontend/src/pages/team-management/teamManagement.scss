@@ -1,0 +1,229 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+
+.team-management {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    & h4 {
+        margin-bottom: 0;
+    }
+
+    &__btn {
+        background-color: $color-brand-1;
+        color: #fff;
+        padding: 0.4rem 0.8rem;
+        transition: .2s all;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-brand-3;
+        }
+
+        &:disabled {
+            background-color: $color-neutral-3;
+        }
+
+    }
+
+    &__header {
+        display: flex;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        margin-right: auto;
+    }   
+
+    &__add-team {
+        align-self: flex-end;
+        background-color: $color-brand-1;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        // background-color: #F7F7F7;
+        // padding: 1rem;
+        // border-radius: 5px;
+        // box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+        // border: 1px solid #EEE;
+    }
+
+    &__team {
+        // background-color: #F7F7F7;
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid #DDD;
+        // box-shadow: 0 .4rem .7rem rgba(0,0,0, .08);
+
+        &:not(:last-child){
+            margin-bottom: .75rem;
+        }
+    }
+
+    &__team-header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__team-info {
+        margin-right: auto;
+    }
+
+    &__team-name {
+
+    }
+
+    &__team-description {
+
+    }
+
+    &__settings {
+        position: relative;
+        margin-right: 1rem;
+    }
+
+    &__team-settings {
+        fill: #777;
+        transition: .3s all;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    &__settings-dropdown {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 4rem;
+        height: 2rem;
+        background-color: red;
+        transform: translateY(100%);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        z-index: 1000;
+    }
+
+    &__team-toggle {
+        fill: $color-brand-2;
+        transition: .15s all;
+        cursor: pointer;
+    }
+
+    &__add-user {
+        margin-top: .4rem;
+        background-color: $color-green;
+        &:hover {
+            background-color: $color-green-light;
+        }
+    }
+
+    &__team-dropdown {
+        margin-top: .4rem;
+    }
+
+    &__user {
+        background-color: #fff;
+        // background-color: #F5F7FF;
+        // background-color: #F7F7F7;
+        padding: 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        border: 1px solid white;
+
+        &:not(:last-child){
+            border-bottom: 1px solid #F7F7F7;
+        }
+    }
+
+    &__user-info {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+    }
+
+    &__user-name {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    &__user-email {
+        font-weight: 200;
+        font-size: 1rem;
+        color: #666;
+    }
+
+    &__user-role {
+        text-transform: uppercase;
+        margin-right: 2rem;
+    }
+
+}
+
+.team-management-modal {
+    position: relative;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+    &__cross {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #AAA;
+        transition: .2s all;
+        fill: currentColor;
+        transform: rotateZ(45deg);
+
+        &:hover {
+            color: #ff0000;
+            transform: rotateZ(225deg);
+        }
+    }
+
+    &__title {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        margin-bottom: .2rem;
+    }
+
+    &__input {
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        color: $color-neutral-5;
+        border: 1px solid #eee;
+        border-radius: .3rem;
+        outline: none;
+        width: 100%;
+        
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__submit {
+        align-self: flex-start;
+    }
+}

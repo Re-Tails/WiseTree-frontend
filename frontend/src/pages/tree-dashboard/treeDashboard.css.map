@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,MAAM,EAAE,KAAK;CAOhB;;AALI,AAAD,wBAAU,CAAC;EACP,IAAI,EAAE,QAAQ;EACd,UAAU,EAAE,MAAM;EAClB,OAAO,ECEM,IAAI;CDDpB",
+    "sources": [
+        "treeDashboard.scss",
+        "../../styles/_ui-misc.scss"
+    ],
+    "names": [],
+    "file": "treeDashboard.css"
+}

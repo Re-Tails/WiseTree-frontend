@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+.dropdown {
+  background-color: #fff;
+  border: 1px solid #000;
+  height: 95%;
+  width: 95%;
+  -webkit-box-shadow: 2px 5px 4px #888888;
+          box-shadow: 2px 5px 4px #888888;
+}
+
+.dropdown-option {
+  width: 100%;
+  background-color: #fff;
+  padding: 8px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  height: 35px;
+}
+
+.dropdown-option:hover {
+  background-color: #3498fc;
+  color: #fff;
+}
+
+.dropdown-option--delete:hover {
+  background-color: #fa6644;
+}
+/*# sourceMappingURL=dropdownMenu.css.map */

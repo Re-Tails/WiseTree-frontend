@@ -1,0 +1,25 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.errorLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 auto;
+
+    &-illustration {
+        display: block;
+        height: 200px;
+        margin: 0 auto 30px;
+        width: 350px;
+    }
+
+    &-text {
+        color: $color-brand-1;
+        font-size: $fontSize-heading-1;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../styles/ui-colors';
+
+@keyframes loadingLayout {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+.loadingLayout::before {
+    content: '';
+    box-sizing: border-box;
+    // top: 40%;
+    // left: 50%;
+    width: 80px;
+    height: 80px;
+    // margin-top: -40px;
+    // margin-left: -40px;
+    border-radius: 50%;
+    border: 6px solid #ccc;
+    border-top-color: $color-brand-1;
+    
+    animation: loadingLayout 1s linear infinite;
+}
+
+.loadingLayout.page-content::before {
+    left: 60%;
+}

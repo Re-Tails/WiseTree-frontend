@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+// font-size
+$fontSize-heading-1: 36px;
+$fontSize-heading-2: 32px;
+$fontSize-heading-3: 24px;
+$fontSize-heading-4: 18px;
+
+$fontSize-body-1: 15px;
+$fontSize-body-2: 11px; // Should be used with $color-neutral-3 for sub-text
+
+$fontSize-button: 12px; // Used exclusively for buttons
+
+// line-height
+$lineHeight-xLoose: 2;
+$lineHeight-loose: 1.8;
+$lineHeight-normal: 1.6;
+$lineHeight-tight: 1.4;
+$lineHeight-xTight: 1.2;

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+.statusDropdown {
+  position: relative;
+}
+
+.statusDropdown-options {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #9D9D9D;
+}
+
+.statusDropdown-options-button {
+  display: block;
+  width: 100%;
+  background-color: inherit;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: left;
+  padding: 5px 24px;
+}
+
+.statusDropdown-options-button[value='published']:hover, .statusDropdown-options-button[value='published']:focus, .statusDropdown-options-button[value='draft']:hover, .statusDropdown-options-button[value='draft']:focus {
+  background-color: #3498fc;
+  color: #fff;
+}
+
+.statusDropdown-options-button[value='archived']:hover, .statusDropdown-options-button[value='archived']:focus {
+  background-color: #fa6644;
+  color: #fff;
+}
+
+.statusDropdown-options.is-visible {
+  display: block;
+}
+
+.statusDropdown-ellipsis {
+  border-radius: 4px;
+  display: block;
+  fill: #9d9d9d;
+  margin-left: 8px;
+}
+
+.statusDropdown-ellipsis:hover, .statusDropdown-ellipsis:focus {
+  background-color: #eee;
+  fill: #3498fc;
+}
+/*# sourceMappingURL=statusDropdown.css.map */

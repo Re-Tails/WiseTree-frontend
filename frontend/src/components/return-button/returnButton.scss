@@ -1,0 +1,18 @@
+@import '../../styles/ui-misc';
+@import '../../styles/ui-colors';
+
+.returnButton {
+    cursor: pointer;
+    border-radius: $borderRadius-default;
+    align-items: center;
+    color: $color-brand-1;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.tree-logo {
+    fill: $color-brand-1;
+    height: 1.8rem;
+}

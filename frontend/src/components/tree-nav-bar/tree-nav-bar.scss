@@ -1,0 +1,65 @@
+@import '../../styles/ui-misc';
+@import '../../styles/ui-colors';
+
+.tree-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  min-height: $navbar-height;
+  // background-color: #544c88;
+  // background-color: lighten($color-brand-1, 20%);
+  // border-bottom: 3px solid #cdccdc;
+  // box-shadow: 0px 3px 7px 0px rgb(97, 97, 97);
+
+  // border-bottom: 2px solid $color-brand-1;
+  box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+  
+  
+
+  &__title {
+    margin-right: auto;
+    color: $color-brand-1;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 0.7rem;
+    color: #696969;
+  }
+  &__dropdown {
+    margin-right: 0.5rem;
+    margin-left: auto;
+
+    & > .btn {
+      background-color: $color-brand-1;
+      color: white;
+    }
+
+  }
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    margin-right: .5rem;
+  }
+
+}
+
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  width: 2px;
+  height: 100%;
+  min-height: 1.5em;
+  vertical-align: middle;
+  background-color: currentColor;
+  opacity: .25;
+}

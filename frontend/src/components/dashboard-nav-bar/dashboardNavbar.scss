@@ -1,0 +1,108 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.navbar {
+    
+    box-shadow: -12px 11px 21px -5px #cdd1e1;
+    grid-column: 1 / -1;
+
+    &-logo {
+        fill: $color-brand-1;
+        width: 8rem;
+    }
+
+    &-item {
+        vertical-align: middle;
+        
+    }
+    
+}
+
+.push-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.vr {
+    display: inline-block;
+    align-self: stretch;
+    width: 2px;
+    height: 100%;
+    min-height: 1.5em;
+    vertical-align: middle;
+    background-color: currentColor;
+    opacity: .25;
+}
+
+.icon {
+    color: $color-brand-1;
+    margin-left: .9rem;
+    margin-right: .9rem;
+    vertical-align: middle;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.icon-circle {
+    color: #fff;
+    vertical-align: middle;
+    font-size: 21px;
+    cursor: pointer;
+    
+}
+
+
+.icon:hover {
+    opacity: 0.8;
+}
+
+
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $color-brand-1 !important;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    
+}
+
+.dropdown-item {
+    cursor: pointer;
+    transition-duration: 0.25s;
+    color: $color-brand-1;
+}
+.dropdown-item:active {
+    background-color: $color-brand-1;
+    color: #fff;
+}
+.dropdown-item:hover {
+    color: #fff;
+    background-color: $color-brand-1;
+
+}
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+.profile {
+    padding: .25rem 1.5rem;
+}
+.dropdown-wisetech {
+    left: auto;
+    right: .9rem;
+    margin-top: -.7rem;
+    width: 15rem;
+    
+}
+
+.show > .dropdown-menu {
+    max-height: 900px;
+    visibility: visible;
+  }
+
+
+
+.dropdown-icon {
+    margin-right: .3rem;
+}

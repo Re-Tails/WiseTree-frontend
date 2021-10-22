@@ -1,0 +1,20 @@
+
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.team-diagrams {
+
+    & h4 {
+        margin-bottom: 0;
+    }
+
+    &__team-name {
+
+    }
+
+    &__team-description {
+        margin-bottom: 1rem;
+    }
+
+}

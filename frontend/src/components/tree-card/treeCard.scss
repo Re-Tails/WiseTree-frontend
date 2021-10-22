@@ -1,0 +1,65 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.treeCard {
+    background-color: #fff;
+    border-radius: $borderRadius-default;
+    border: $border-default;
+    box-shadow: $boxShadow-default;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 $spacing-ui-medium $spacing-ui-medium 0;
+    min-height: 210px;
+    width: 400px;
+
+    &-thumbnail {
+        border-radius: $borderRadius-default $borderRadius-default 0 0;
+        height: 140px;
+        text-align: center;
+        padding: $spacing-ui-xxLarge $spacing-ui-medium;
+    }
+
+    &-title {
+        border-radius: 0 0 $borderRadius-default $borderRadius-default;
+        padding: $spacing-ui-xSmall $spacing-ui-medium;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-name {
+        color: $color-text-1;
+        flex: 1 0 0;
+        font-size: $fontSize-body-1;
+        overflow: hidden;
+        text-overflow: clip;
+        white-space: nowrap;
+    }
+
+    &-info {
+        color: $color-neutral-3;
+        font-size: $fontSize-body-2;
+    }
+}
+
+.newCard {
+    margin: 0;
+    position: relative;
+
+    &-content {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-icon {
+        display: block;
+        margin: 0 auto $spacing-ui-xxSmall;
+    }
+}

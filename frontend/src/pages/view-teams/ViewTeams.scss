@@ -1,0 +1,11 @@
+.view-teams {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    & .team-card {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+}
