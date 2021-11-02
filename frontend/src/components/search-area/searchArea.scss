@@ -49,6 +49,8 @@
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
+    height: 10rem;
+    overflow-y: scroll;
 
     &__word {
         position: relative;

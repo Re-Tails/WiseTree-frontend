@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { PreviewBar } from './previewBar';
 import SearchArea from '../search-area/searchArea';
@@ -54,46 +54,52 @@ function ViewingContent(props) {
 
 
     return (
+        <>
         <div className="previewBar">
-            <SearchArea
-                search={props.search}
-                viewMode={props.viewMode}
-                LAYOUT_SEARCHPANE_WIDTH={props.LAYOUT_SEARCHPANE_WIDTH}
-                LAYOUT_SEARCHPANE_HEIGHT={props.LAYOUT_SEARCHPANE_HEIGHT}
-                LAYOUT_WORDCLOUD_WIDTH={props.LAYOUT_WORDCLOUD_WIDTH}
-                LAYOUT_WORDCLOUD_HEIGHT={props.LAYOUT_WORDCLOUD_HEIGHT}
-                isWordCloudOpen={props.isWordCloudOpen}
-                toggleIsWordCloudOpen={props.toggleIsWordCloudOpen}
-                toggleShowTactics={props.toggleShowTactics}
-                showTactics={props.showTactics}
-                resetSearch={props.resetSearch}
-                //MORE
-                maxWordCloudCount={props.maxWordCloudCount}
-                WORDCLOUD_MINOCCURS={props.WORDCLOUD_MINOCCURS}
-                wordCloudData={props.wordCloudData}
-                setDefaultZoom={props.setDefaultZoom}
-                refetchTree={props.refetchTree}
-                wordCloudColourScale={props.wordCloudColourScale}
-            />
+            <div className="previewBar__viewing-header">
+                <SearchArea
+                    search={props.search}
+                    viewMode={props.viewMode}
+                    LAYOUT_SEARCHPANE_WIDTH={props.LAYOUT_SEARCHPANE_WIDTH}
+                    LAYOUT_SEARCHPANE_HEIGHT={props.LAYOUT_SEARCHPANE_HEIGHT}
+                    LAYOUT_WORDCLOUD_WIDTH={props.LAYOUT_WORDCLOUD_WIDTH}
+                    LAYOUT_WORDCLOUD_HEIGHT={props.LAYOUT_WORDCLOUD_HEIGHT}
+                    isWordCloudOpen={props.isWordCloudOpen}
+                    toggleIsWordCloudOpen={props.toggleIsWordCloudOpen}
+                    toggleShowTactics={props.toggleShowTactics}
+                    showTactics={props.showTactics}
+                    resetSearch={props.resetSearch}
+                    //MORE
+                    maxWordCloudCount={props.maxWordCloudCount}
+                    WORDCLOUD_MINOCCURS={props.WORDCLOUD_MINOCCURS}
+                    wordCloudData={props.wordCloudData}
+                    setDefaultZoom={props.setDefaultZoom}
+                    refetchTree={props.refetchTree}
+                    wordCloudColourScale={props.wordCloudColourScale}
+                />
 
-            {/* Ancestors Button List */}
-            { ancestors.length > 0 &&
-                <div className="previewBar__ancestors">
-                    { ancestors.map(ancestor => 
-                        <button 
-                            key={ancestor.parentId + ' ' + ancestor.id}
-                            className={ancestor.entityType ? `previewBar__relativeButton ${ancestor.entityType}` : 'previewBar__relativeButton tree'}
-                            onClick={() => { 
-                                props.setCurrentNodeById(ancestor.id);
-                            }}
-                            onMouseOver={() => { props.triggerHoverOver(props.getNodeById(ancestor.id)) }}
-                            onMouseOut={() => { props.triggerHoverOut() } }>
-                            { ancestor.referenceId }
-                        </button>
-                    )}
+                {/* Ancestors Button List */}
+                { ancestors.length > 0 &&
+                    <div className="previewBar__ancestors">
+                        { ancestors.map(ancestor => 
+                            <button 
+                                key={ancestor.parentId + ' ' + ancestor.id}
+                                className={ancestor.entityType ? `previewBar__relativeButton ${ancestor.entityType}` : 'previewBar__relativeButton tree'}
+                                onClick={() => { 
+                                    props.setCurrentNodeById(ancestor.id);
+                                }}
+                                onMouseOver={() => { props.triggerHoverOver(props.getNodeById(ancestor.id)) }}
+                                onMouseOut={() => { props.triggerHoverOut() } }>
+                                { ancestor.referenceId }
+                            </button>
+                        )}
+                    </div>
+                }
+
+                <div className={nameContainerClass}>
+                    <p className="viewing-grid__data viewing-grid__data--name">{ formData.referenceId + " " + formData.name }</p>
                 </div>
-            }
-
+            </div>
             
             {/* <div className='previewBar-fieldsContainer'>
                 <div className='previewBar-verticalContainer'>
@@ -183,10 +189,6 @@ function ViewingContent(props) {
 
 
             <div className="viewing-grid">
-                <div className={nameContainerClass}>
-                    <p className="viewing-grid__data viewing-grid__data--name">{ formData.name }</p>
-                </div>
-
                 { formData.description &&
                 <div className="viewing-grid__description viewing-grid__viewing-item">
                     <p className="viewing-grid__data viewing-grid__data--description">{ formData.description }</p>
@@ -252,7 +254,9 @@ function ViewingContent(props) {
                     <h4 className={labelClass + " viewing-grid__label--optionality"}>Optionality & Sequence</h4>
                     <p className="viewing-grid__data viewing-grid__data--optionality">{ formData.optionalityAndSequence }</p>
                 </div> }
+            </div>
 
+            <div className="previewBar__viewing-footer">
                 {/* Children Button List */}
                 { formData?.children?.length > 0 && 
                     <div className="previewBar__children">
@@ -269,6 +273,7 @@ function ViewingContent(props) {
                 }
             </div>
         </div>
+        </>
     );
 }
 

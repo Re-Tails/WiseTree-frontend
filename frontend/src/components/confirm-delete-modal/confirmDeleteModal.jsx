@@ -11,6 +11,7 @@ export default function ConfirmDeleteModal(props) {
         window.$("#confirmDeleteModal").modal("hide");
         props.function(props.id);
     }
+    
     return (
         <div className="modal fade" id="confirmDeleteModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered" role="document">

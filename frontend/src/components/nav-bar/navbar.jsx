@@ -80,7 +80,7 @@ export default function NavBar(props) {
 
 
                 {/* If user is moderator display this */}
-                { user?.isModerator && <>
+                { user?.isModerator && user?.role !== 'admin' && <>
                 <li ref={moderatorRef} className={`sidebar-item mt-2 ${(dropdownActive == "2" || active == "moderator") ? "sidebar-collapsed" : ""}`} onClick={() => setDropdownActive((current) => current == 2 ? 0 : 2)} data-toggle="collapse" href="#moderatorCollapse" role="button" aria-expanded="false" aria-controls="moderatorCollapse">
                     <span className="mr-2"><FontAwesomeIcon icon={faHammer} /></span>Moderation Tools<span className={`menu-arrow ${(dropdownActive == 2 || active == "moderator") ? "active-arrow" : ""}`}><FontAwesomeIcon icon={faAngleRight} /></span>
 

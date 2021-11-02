@@ -853,13 +853,13 @@ function TreeEditor() {
         return createHTML();
     } else if (error) {
         return (
-            <div ref={wrapperRef}>
+            <div className="treeEditor__error" ref={wrapperRef}>
                 <ErrorLayout isStandAlonePage={true} />
             </div>
         );
     } else {
         return (
-            <div ref={wrapperRef}>
+            <div className="treeEditor__loading" ref={wrapperRef}>
                 <LoadingLayout isStandAlonePage={true} />
             </div>
         );
@@ -877,7 +877,7 @@ function TreeEditor() {
                 handleZoomOut={handleZoomOut}
             />
 
-            <div className="treeEditor__content-wrapper">
+            {/* <div className="treeEditor__content-wrapper"> */}
                 {/* { currentPreviewNode.id ? ( */}
                     {/* // PreviewBar handled here, this is where most of our work for sprint 1 will take place most likely  */}
                     <PreviewBar
@@ -1072,7 +1072,7 @@ function TreeEditor() {
                     refreshView={refetch}
                     setCurrentNodeById={setCurrentNodeByIdAndScroll} 
                     updateWordCloudData={updateWordCloudData}/> }
-            </div>
+            {/* </div> */}
         </div>;
     }
 
@@ -1104,7 +1104,7 @@ function TreeEditor() {
             .on('click', node => { 
                 setCurrentNodeById(node.data.id); 
                 setCurrentSearchCriteria(() => "");
-                updateViewMode(isEditor ? "editing" : "viewing");
+                updateViewMode((isEditor && data?.getTreeById[0].status === "draft") ? "editing" : "viewing");
                 setCurrentPreviewNode(node.data);
                 setTogglePreview(() => true);
                 // console.log(`${node.data.id} was clicked`);
@@ -1124,7 +1124,7 @@ function TreeEditor() {
             .on('click', node => { 
                 setCurrentNodeById(node.data.id); 
                 setCurrentSearchCriteria(() => "");
-                updateViewMode(isEditor ? "editing" : "viewing");
+                updateViewMode((isEditor && data?.getTreeById[0].status === "draft") ? "editing" : "viewing");
                 setCurrentPreviewNode(node.data);
                 setTogglePreview(() => true);
                 // console.log(`${node.data.id} was clicked`);
@@ -1145,7 +1145,7 @@ function TreeEditor() {
             .on('click', node => { 
                 setCurrentNodeById(node.data.id); 
                 setCurrentSearchCriteria(() => "");
-                updateViewMode(isEditor ? "editing" : "viewing");
+                updateViewMode((isEditor && data?.getTreeById[0].status === "draft") ? "editing" : "viewing");
                 setCurrentPreviewNode(node.data);
                 setTogglePreview(() => true);
                 // console.log(`${node.data.id} was clicked`);
@@ -1165,7 +1165,7 @@ function TreeEditor() {
             .on('click', node => { 
                 setCurrentNodeById(node.data.id); 
                 setCurrentSearchCriteria(() => "");
-                updateViewMode(isEditor ? "editing" : "viewing");
+                updateViewMode((isEditor && data?.getTreeById[0].status === "draft") ? "editing" : "viewing");
                 setCurrentPreviewNode(node.data);
                 setTogglePreview(() => true);
                 // console.log(`${node.data.id} was clicked`);
@@ -1192,7 +1192,7 @@ function TreeEditor() {
                 setCurrentNodeById(node.data.id); 
                 setCurrentSearchCriteria(() => "");
                 setCurrentPreviewNode(node.data);
-                updateViewMode(isEditor ? "editing" : "viewing");
+                updateViewMode((isEditor && data?.getTreeById[0].status === "draft") ? "editing" : "viewing");
                 setTogglePreview(() => true);
             })
             .on('mouseover', node => { triggerHoverOver(node); })
@@ -1217,7 +1217,7 @@ function TreeEditor() {
                 setCurrentNodeById(node.data.id); 
                 setCurrentSearchCriteria(() => "");
                 setCurrentPreviewNode(node.data);
-                updateViewMode(isEditor ? "editing" : "viewing");
+                updateViewMode((isEditor && data?.getTreeById[0].status === "draft") ? "editing" : "viewing");
                 setTogglePreview(() => true);
                 // console.log(`${node.data.id} was clicked`);
             });

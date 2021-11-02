@@ -16,16 +16,12 @@ $previewBar-width: 28rem;
     flex: 0 0 $previewBar-width;
     background-color: #F5F7FF;
     height: 100%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     overflow-x: hidden;
-    padding: 1rem 0.625rem 0 1rem;
     // box-shadow: .5rem 0 1rem rgba(0,0,0,.1);
     border-right: 1px solid #d1d9f8;
 
-
-    &::-webkit-scrollbar-track {
-        background: #F5F7FF;
-    }
+    // padding: 1rem 0.625rem 0 1rem;
 
     // VIEWING LAYOUT
     &__relativeButton {
@@ -229,6 +225,7 @@ $previewBar-width: 28rem;
         color: $color-brand-1;
         font-size: 18px;
         margin-right: auto;
+        max-width: 55%;
     }
 
     &__add {
@@ -244,14 +241,62 @@ $previewBar-width: 28rem;
     &__input-wrapper {
         display: flex;
         flex-direction: column;
-        
+        flex: 1 0 1rem;
+        height: 10rem;
+        padding: 1rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track {
+            // background: #F5F7FF;
+            background-color: transparent;
+        }
+    }
+
+    &__editing-header {
+        display: flex;
+        // flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        background-color: #F5F7FF;
+        width: $previewBar-width;
+        box-shadow: 0 1rem 2rem rgba($color-brand-1, .1);
+        border-right: 1px solid #d1d9f8;
+        border-bottom: 1px solid #d1d9f8;
     }
 
     &__viewing-header {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: .6rem;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        background-color: #F5F7FF;
+        width: $previewBar-width;
+        box-shadow: 0 1rem 2rem rgba($color-brand-1, .1);
+        border-right: 1px solid #d1d9f8;
+        border-bottom: 1px solid #d1d9f8;
+    }
+
+    &__viewing-footer {
+        display: flex;
+        align-items: stretch;
+        padding: 1rem;
+        background-color: #F5F7FF;
+        width: $previewBar-width;
+        box-shadow: 0 -1rem 2rem rgba($color-brand-1, .1);
+        border-right: 1px solid #d1d9f8;
+        border-top: 1px solid #d1d9f8;
+    }
+
+    &__save-wrapper {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #F5F7FF;
+        width: $previewBar-width;
+        box-shadow: 0 -1rem 2rem rgba($color-brand-1, .1);
+        border-right: 1px solid #d1d9f8;
+        border-top: 1px solid #d1d9f8;
     }
     
     &-inputGroup {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useMutation } from '@apollo/react-hooks';
@@ -17,7 +17,6 @@ EditingContent.propTypes = {
 
 function EditingContent(props) {
     const [mutateNodeAttributes] = useMutation(SET_NODE_ATTRIBUTES);
-
 
     function handleFormChange(event) {
         const { name, value } = event.target;
@@ -66,19 +65,17 @@ function EditingContent(props) {
             });
     }
 
-    // useEffect(() => { console.log(props.formData) }, [props.formData]);
-
     return (
-        
-        <div className='previewBar previewBarWordCloudHidden'>
-            <form onSubmit={updateCurrentNode} onChange={handleFormChange}>
+        <>
+        <form className='previewBar previewBarWordCloudHidden' onSubmit={updateCurrentNode} onChange={handleFormChange}>
+            {/* <form onSubmit={updateCurrentNode} onChange={handleFormChange}> */}
                 <input type='submit' style={{ display: 'none' }} />
+                <div className="previewBar__editing-header">
+                    <p className='previewBar__node-title'>{props.formData.referenceId}</p>
+                    <button onClick={() => props.addNode()} type="button" className="btn btn-success mr-2">Add Child</button>
+                    <button onClick={() => props.deleteNode()} type="button" className="btn btn-danger ">Delete</button>
+                </div>
                 <div className="previewBar__input-wrapper">
-                    <div className="previewBar__viewing-header">
-                        <p className='previewBar__node-title'>{props.formData.referenceId}</p>
-                        <button onClick={() => props.addNode()} type="button" className="btn btn-success mr-2">Add Child</button>
-                        <button onClick={() => props.deleteNode()} type="button" className="btn btn-danger ">Delete</button>
-                    </div>
                     <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
                         <label className='previewBar-inputGroup-label--edit'>Reference ID</label>
                         <input
@@ -211,28 +208,26 @@ function EditingContent(props) {
                             value={props.formData.roles}
                         ></textarea>
                     </div>
+                </div>
+                <div className="previewBar__save-wrapper">
                     <div className='row m-1'>
-                    <button
-                            className='btn btn-block btn-primary'
-                            type='submit'
-                        >
+                        <button
+                        className='btn btn-block btn-primary'
+                        type='submit'>
                             Save
                         </button>
                     </div>
                     <div className='row m-1'>
-                    <button
+                        <button
                         className='btn btn-block btn-danger'
-                        onClick={props.toggleViewingMode}
-                    >
-                        Cancel
-                    </button>
+                        onClick={props.toggleViewingMode}>
+                            Cancel
+                        </button>
                     </div>
-                   
-                    
-                   
                 </div>
-            </form>
-        </div>
+            {/* </form> */}
+        </form>
+        </>
     );
 }
 

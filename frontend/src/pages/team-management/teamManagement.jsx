@@ -6,6 +6,8 @@ import { ReactComponent as ArrowIcon } from '../../assets/icons/icon-arrow-left.
 import { ReactComponent as GearIcon } from '../../assets/icons/icon-gear.svg';
 import { ReactComponent as PlusIcon } from '../../assets/icons/icon-plus.svg';
 
+import ConfirmDeleteModal from '../../components/confirm-delete-modal/confirmDeleteModal';
+
 import './teamManagement.scss';
 
 import { 

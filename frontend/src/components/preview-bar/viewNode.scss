@@ -3,20 +3,28 @@
 @import "../../styles/ui-text";
 
 .viewing-grid {
-    margin-bottom: .5rem;
+
+    flex: 1 0 1rem;
+    overflow-y: scroll;
   
     display: grid;
     
     // Specifying there are 2 equally sized columns in the grid
     grid-template-columns: 1fr 1fr;
   
-    grid-template-rows: repeat(7, auto);
+    grid-template-rows: repeat(6, auto);
+
+    padding: 1rem .625rem 1rem 1rem;
 
     // grid-template-rows: [name-start] auto [name-end description-start] auto [description-end tactic-start] auto 
     // [tactic-end necessity-logic-start] auto [necessity-logic-end detail-start] auto [detail-end sufficiency-optionality-start] auto 
     // [sufficiency-optionality-end];
   
     grid-gap: .7rem .4rem;
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
 
     ////////////////////////////////////////////////////////
     // All main grid containers

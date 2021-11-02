@@ -83,7 +83,7 @@ export default function SearchArea(props) {
                 <button 
                     type="button"
                     className="search-area__btn search-area__btn-cloud"
-                    onClick={props.toggleIsWordCloudOpen} 
+                    onClick={() => {props.toggleIsWordCloudOpen()}} 
                     title={props.isWordCloudOpen ? 'Click here to hide the word cloud' : 'Click here to show the word cloud, which allows you to search the tree using the most common terms'}
                     // style={{ visibility: props.viewMode === 'viewing' ? 'visible' : 'hidden' }}
                     >
