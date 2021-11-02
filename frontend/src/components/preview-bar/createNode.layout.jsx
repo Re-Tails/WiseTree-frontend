@@ -90,152 +90,160 @@ function CreatingContent(props) {
     const [id, setId] = useState("");
 
     return (
-        <div ref={formRef} className='previewBar previewBarWordCloudHidden'>
-            <form onSubmit={createNewData} onChange={handleFormChange}>
+        <form onSubmit={createNewData} onChange={handleFormChange} ref={formRef} className='previewBar previewBarWordCloudHidden'>
+            {/* <form onSubmit={createNewData} onChange={handleFormChange}> */}
                 <input type='submit' style={{ display: 'none' }} />
                 
-                    <p className="previewBar__node-title previewBar__create-title">Create Child Node: <span className="previewBar__highlight-ref">{ id }</span></p>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Reference ID</label>
-                        <input
-                            ref={referenceInput}
-                            onChange={() => setId(() => referenceInput.current.value)}
-                            className='previewBar-inputGroup-input'
-                            id='referenceId'
-                            name='referenceId'
-                            autoFocus
-                            value={formData.referenceId}
-                        ></input>
+                    <div className="previewBar__viewing-header">
+                        <p className="previewBar__node-title previewBar__create-title">Create Child Node: <span className="previewBar__highlight-ref">{ id }</span></p>
                     </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Entity Type</label>
-                        <select
-                            name='entityType'
-                            value={formData.entityType}
-                            className='previewBar-inputGroup-dropdown'
-                        >
-                            {props.isParentRootNode ? (
-                                <option className='previewBar-inputGroup-dropdown-item' value='horizon'>
-                                    Horizon
+
+                    <div className="previewBar__input-wrapper">
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Reference ID</label>
+                            <input
+                                ref={referenceInput}
+                                onChange={() => setId(() => referenceInput.current.value)}
+                                className='previewBar-inputGroup-input'
+                                id='referenceId'
+                                name='referenceId'
+                                autoFocus
+                                value={formData.referenceId}
+                            ></input>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Entity Type</label>
+                            <select
+                                name='entityType'
+                                value={formData.entityType}
+                                className='previewBar-inputGroup-dropdown'
+                            >
+                                {props.isParentRootNode ? (
+                                    <option className='previewBar-inputGroup-dropdown-item' value='horizon'>
+                                        Horizon
+                                    </option>
+                                ) : null}
+                                <option className='previewBar-inputGroup-dropdown-item' value='lever'>
+                                    Lever
                                 </option>
-                            ) : null}
-                            <option className='previewBar-inputGroup-dropdown-item' value='lever'>
-                                Lever
-                            </option>
-                            <option className='previewBar-inputGroup-dropdown-item' value='injection'>
-                                Injection
-                            </option>
-                            <option className='previewBar-inputGroup-dropdown-item' value='strategy'>
-                                Strategy
-                            </option>
-                        </select>
+                                <option className='previewBar-inputGroup-dropdown-item' value='injection'>
+                                    Injection
+                                </option>
+                                <option className='previewBar-inputGroup-dropdown-item' value='strategy'>
+                                    Strategy
+                                </option>
+                            </select>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Name</label>
+                            <input className='previewBar-inputGroup-input' name='name' value={formData.name}></input>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Description</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                name='description'
+                                value={formData.description}
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Tactic</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                name='tactic'
+                                value={formData.tactic}
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Necessity</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                name='necessity'
+                                value={formData.necessity}
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Logic</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                name='logic'
+                                value={formData.logic}
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>If</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                value={formData.if}
+                                placeholder={formData.necessity !== '' ? '[If] is recommended if you have [Necessity]' : ''}
+                                name='if'
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>and</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                value={formData.and}
+                                placeholder={formData.tactic !== '' ? '[And] is recommended if you have [Tactic]' : ''}
+                                name='and'
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>then</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                value={formData.then}
+                                placeholder={
+                                    formData.description !== '' ? '[Then] is recommended if you have [Description]' : ''
+                                }
+                                name='then'
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>because</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                value={formData.because}
+                                placeholder={formData.logic !== '' ? '[Because] is recommended if you have [Logic]' : ''}
+                                name='because'
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Sufficiency</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                value={formData.sufficiency}
+                                name='sufficiency'
+                            ></textarea>
+                        </div>
+                        <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
+                            <label className='previewBar-inputGroup-label--edit'>Optionality &amp; Sequence</label>
+                            <textarea
+                                className='previewBar-inputGroup-textarea'
+                                value={formData.optionalityAndSequence}
+                                name='optionalityAndSequence'
+                            ></textarea>
+                        </div>
                     </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Name</label>
-                        <input className='previewBar-inputGroup-input' name='name' value={formData.name}></input>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Description</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            name='description'
-                            value={formData.description}
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Tactic</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            name='tactic'
-                            value={formData.tactic}
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Necessity</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            name='necessity'
-                            value={formData.necessity}
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Logic</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            name='logic'
-                            value={formData.logic}
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>If</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            value={formData.if}
-                            placeholder={formData.necessity !== '' ? '[If] is recommended if you have [Necessity]' : ''}
-                            name='if'
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>and</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            value={formData.and}
-                            placeholder={formData.tactic !== '' ? '[And] is recommended if you have [Tactic]' : ''}
-                            name='and'
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>then</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            value={formData.then}
-                            placeholder={
-                                formData.description !== '' ? '[Then] is recommended if you have [Description]' : ''
-                            }
-                            name='then'
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>because</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            value={formData.because}
-                            placeholder={formData.logic !== '' ? '[Because] is recommended if you have [Logic]' : ''}
-                            name='because'
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Sufficiency</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            value={formData.sufficiency}
-                            name='sufficiency'
-                        ></textarea>
-                    </div>
-                    <div className='previewBar-inputGroup previewBar-inputGroup--edit'>
-                        <label className='previewBar-inputGroup-label--edit'>Optionality &amp; Sequence</label>
-                        <textarea
-                            className='previewBar-inputGroup-textarea'
-                            value={formData.optionalityAndSequence}
-                            name='optionalityAndSequence'
-                        ></textarea>
-                    </div>
-                    <div className='row m-1'>
-                    <button className='btn btn-block btn-primary' type='submit'>
-                        Create
-                    </button>
-                    </div>
-                    <div className='row m-1'>
-                    <button
-                        className='btn btn-block btn-danger'
-                        onClick={handleCloseFormClick}
-                    >
-                        Cancel
-                    </button>
+
+                    <div className="previewBar__save-wrapper">
+                        <div className='row m-1'>
+                            <button className='btn btn-block btn-primary' type='submit'>
+                                Create
+                            </button>
+                            </div>
+                            <div className='row m-1'>
+                            <button
+                                className='btn btn-block btn-danger'
+                                onClick={handleCloseFormClick}
+                            >
+                                Cancel
+                            </button>
+                        </div>
                     </div>
                           
             </form>
-        </div>
+        // </div>
     );
 }
 

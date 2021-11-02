@@ -71,7 +71,7 @@ function EditingContent(props) {
             {/* <form onSubmit={updateCurrentNode} onChange={handleFormChange}> */}
                 <input type='submit' style={{ display: 'none' }} />
                 <div className="previewBar__editing-header">
-                    <p className='previewBar__node-title'>{props.formData.referenceId}</p>
+                    <p className='previewBar__node-title previewBar__edit-title'>{props.formData.referenceId}</p>
                     <button onClick={() => props.addNode()} type="button" className="btn btn-success mr-2">Add Child</button>
                     <button onClick={() => props.deleteNode()} type="button" className="btn btn-danger ">Delete</button>
                 </div>

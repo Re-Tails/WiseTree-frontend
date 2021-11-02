@@ -33,6 +33,8 @@ $previewBar-width: 28rem;
         justify-content: center;
         align-items: center;
         margin-right: .4rem;
+        margin-bottom: .4rem;
+
     }
 
     &__ancestors {
@@ -225,6 +227,10 @@ $previewBar-width: 28rem;
         color: $color-brand-1;
         font-size: 18px;
         margin-right: auto;
+        // max-width: 55%;
+    }
+
+    &__edit-title {
         max-width: 55%;
     }
 
@@ -255,7 +261,7 @@ $previewBar-width: 28rem;
     &__editing-header {
         display: flex;
         // flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         padding: 1rem;
         background-color: #F5F7FF;
         width: $previewBar-width;
@@ -384,7 +390,7 @@ $previewBar-width: 28rem;
 
 
     &__create-title {
-        margin-bottom: .75rem;
+        // margin-bottom: .75rem;
     }
 
     &__highlight-ref {
