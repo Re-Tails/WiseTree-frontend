@@ -9,9 +9,6 @@ import './navbar.scss';
 import { useUser, useUserAuth } from '../../services/AuthenticationContextProvider';
 
 export default function NavBar(props) {
-    // const { authenticationData, clearAuthenticationData } = useContext(AuthenticationContext);
-
-    // useEffect(() => {}, [authenticationData]);
 
     const match = useRouteMatch();
 

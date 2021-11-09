@@ -28,3 +28,25 @@
         height: 80px
     }
 }
+
+
+.vr {
+    display: inline-block;
+    align-self: stretch;
+    width: 2px;
+    height: 100%;
+    min-height: 1.5em;
+    vertical-align: middle;
+    background-color: currentColor;
+    opacity: .25;
+}
+
+
+.bottom-toast-legend {
+    background-color: #eee;
+}
+
+.bottom-toast-legend-hidden {
+    background-color: #eee;
+    color: gray;
+}

@@ -3,11 +3,14 @@ import { useHistory } from 'react-router-dom';
 
 import './tooltip.scss';
 
-export default function Tooltip() {
+export default function Tooltip(props) {
   const history = useHistory();
-
+  var style = {}
+  if (!props.legend) {
+    style.display = 'none' 
+  }
   return (
-      <div className="card__color-legend">
+      <div className="card__color-legend" style={style}>
         <div className="card__color-legend__key">
           <div className="card__color-legend__box card__color-legend__tree"></div>
           <p className="card__color-legend__label">Tree</p>

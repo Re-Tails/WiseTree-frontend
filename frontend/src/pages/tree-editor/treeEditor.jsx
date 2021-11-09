@@ -201,6 +201,7 @@ function TreeEditor() {
     const refetchTree = async () => await refetch();
 
     const [toolTip, setToolTip] = useState({ show: false, x: 0, y: 0 });
+    const [legend, setLegend] = useState(true)
 
     const [currentPreviewNodeId, setCurrentPreviewNodeId] = useState("");
     const [currentPreviewNode, setCurrentPreviewNode] = useState({});
@@ -223,6 +224,8 @@ function TreeEditor() {
     function setFormData(nodeData){
         setCurrentPreviewNode(() => nodeData);
     }
+
+    
 
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [isPreviewBarOpen, setIsPreviewBarOpen] = useState(true);
@@ -871,10 +874,12 @@ function TreeEditor() {
             {/* { !user && <Redirect to="/login" /> } */}
 
             <TreeNavbar name={ formattedTree.name } owner={diagramOwner } />
-            <Tooltip />
+            <Tooltip legend={legend} />
             <ZoomToast 
                 handleZoomIn={handleZoomIn}
                 handleZoomOut={handleZoomOut}
+                legend={legend}
+                setLegend={setLegend}
             />
 
             {/* <div className="treeEditor__content-wrapper"> */}
