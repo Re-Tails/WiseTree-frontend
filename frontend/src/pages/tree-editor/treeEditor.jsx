@@ -1039,7 +1039,7 @@ function TreeEditor() {
                 /> */}
 
                 {/* THIS IS THE WORDCLOUD - DO NOT UNCOMMENT UNLESS ASKED */}
-                <svg ref={svgRef} className='treeEditor-canvas'>
+                <svg ref={svgRef} className='treeEditor-canvas shadow'>
                     {/* Hamburger menu handled here */}
                     {/* <foreignObject
                         width={LAYOUT_DROPDOWN_WIDTH}
