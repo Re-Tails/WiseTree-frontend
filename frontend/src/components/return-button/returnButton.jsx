@@ -9,11 +9,10 @@ import './returnButton.scss';
 
 export default function ReturnButton() {
     const history = useHistory();
-    const returnToPreviousPage = () => history.push('/dashboard');
     
     return (
         <div>
-            <span className="ml-3 mr-3 returnButton" onClick={() => returnToPreviousPage()}><FontAwesomeIcon icon={faArrowLeft} /></span>
+            <span className="ml-3 mr-3 returnButton" onClick={() => history.goBack()}><FontAwesomeIcon icon={faArrowLeft} /></span>
             <div className="vr"></div>
             <TreeIcon className="tree-logo"/>
 
