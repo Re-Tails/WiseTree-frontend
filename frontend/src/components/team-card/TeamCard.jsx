@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TeamCard.scss';
 
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function TeamCard(props) {
 
@@ -17,7 +17,7 @@ function TeamCard(props) {
     }
 
     return (
-        <Link to={`/dashboard/team-published?${props?.team._id}`} className="team-card">
+        <Link to={`/dashboard/team-published#${props?.team._id}`} className="team-card">
             <div className="team-card__top-background"></div>
             <div className="team-card__image-container">
                 { userProfiles.map(userProfile => <div key={userProfile._id} className="team-card__user-profile">{ userProfile.initial }</div>) }

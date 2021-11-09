@@ -49,7 +49,7 @@ function TeamDiagrams(props) {
             {
                 teams?.map(team => 
                     <React.Fragment key={team.team._id}>
-                        <div className="team-diagrams__team">
+                        <div className="team-diagrams__team" id={team.team._id}>
                             <h4 className="team-diagrams__team-name">{ team.team.name }</h4>
                             <p className="team-diagrams__team-description">{ team.team.description }</p>
                             <div className="team-diagrams__team-diagrams">
