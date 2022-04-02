@@ -1,13 +1,11 @@
 # Authors
-
-### Front-end team
+### DevOps Team
+-   Tien Long Lam - lamtienlong9@gmail.com (preferred) / lamtienlong@student.uts.edu.au
+### Previous Team
 
 -   Cattleya Tantri - 11128345@student.uts.edu.au
 -   Minh Doan Vu - minhdvu.pro@gmail.com (preferred) / 13066461@student.uts.edu.au
 -   Trung The Phan - thetrung2411@gmail.com (preferred) / 13004965@student.uts.edu.au
-
-### Back-end team
-
 -   Donny Pereira - 13199587@student.uts.edu.au
 -   Justin Brien - 13217702@student.uts.edu.au
 -   Kye Manning Lees - 13233681@student.uts.edu.au
