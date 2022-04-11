@@ -2,7 +2,7 @@
     "name": "wise-tech-group",
     "version": "0.1.0",
     "private": true,
-    "proxy": "http://localhost:4000",
+    "proxy": "https://wisetech-app.herokuapp.com/",
     "dependencies": {
         "@apollo/react-hooks": "^3.1.5",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -23,7 +23,6 @@
         "eslint": "^6.8.0",
         "graphql": "^15.3.0",
         "jquery": "^3.6.0",
-        "node-sass": "^4.14.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
@@ -38,7 +37,8 @@
     },
     "devDependencies": {
         "editorconfig": "0.15.3",
-        "eslint-plugin-react": "^7.21.2"
+        "eslint-plugin-react": "^7.21.2",
+        "sass": "^1.49.9"
     },
     "scripts": {
         "start": "react-scripts start",
