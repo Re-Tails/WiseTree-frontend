@@ -1,6 +1,9 @@
 # Authors
 ### DevOps Team
+-   Liam Lindsay - liam.j.lindsay@student.uts.edu.au
 -   Tien Long Lam - lamtienlong9@gmail.com (preferred) / lamtienlong@student.uts.edu.au
+-   Hussein El-Husseini - hussein.el-husseini@student.uts.edu.au
+-   Hamish Mackenzie - hamish.r.mackenzie@student.uts.edu.au
 ### Previous Team
 
 -   Cattleya Tantri - 11128345@student.uts.edu.au
