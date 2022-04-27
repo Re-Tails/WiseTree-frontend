@@ -36,14 +36,22 @@
         "wordcloud": "^1.1.1"
     },
     "devDependencies": {
+        "@babel/core": "^7.17.9",
+        "@babel/preset-env": "^7.16.11",
+        "babel-jest": "^24.9.0",
         "editorconfig": "0.15.3",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.6",
         "eslint-plugin-react": "^7.21.2",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^24.9.0",
+        "jest-svg-transformer": "^1.0.0",
         "sass": "^1.49.9"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "jest",
         "lint": "eslint ./src/**.js"
     },
     "eslintConfig": {
@@ -64,4 +72,5 @@
     "engines": {
       "node": "v16.14.0"
     }
+
 }
