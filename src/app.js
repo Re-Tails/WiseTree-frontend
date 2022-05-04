@@ -14,8 +14,8 @@ import './app.scss';
 import { createHttpLink } from 'apollo-link-http';
 
 const link = createHttpLink({
-    uri: "/graphql",
-    credentials: "same-origin"
+    uri: "https://wisetech-app.herokuapp.com/graphql",
+    credentials: "include"
 });
 
 const client = new ApolloClient({
