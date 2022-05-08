@@ -53,7 +53,7 @@ export default function AuthenticationProvider({ children }) {
     
 
     function getUserData() {
-        return fetch("/userData").then(res => res.json()).then(res => {
+        return fetch("https://wisetech-app.herokuapp.com/userData").then(res => res.json()).then(res => {
             if (res.user) {
                 setUser(() => res.user);
                 return res.user;
@@ -67,7 +67,7 @@ export default function AuthenticationProvider({ children }) {
 
     function login(email, password) {
         console.log("test 1")
-        return fetch("/login", {
+        return fetch("https://wisetech-app.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -95,7 +95,7 @@ export default function AuthenticationProvider({ children }) {
     }
 
     function logout() {
-        fetch("/logout")
+        fetch("https://wisetech-app.herokuapp.com/logout")
             .then(() => setUser(() => null))
             .then(() => {
                 setLogoutMessage("You have been succesfully logged out.")
@@ -104,7 +104,7 @@ export default function AuthenticationProvider({ children }) {
     }
 
     function isUserAuth() {
-        fetch("/isUserAuth").then(res => res.json()).then(res => {
+        fetch("https://wisetech-app.herokuapp.com/isUserAuth").then(res => res.json()).then(res => {
             if (!res.isLoggedIn) {
                 if(user){
                     setUser(() => null);
