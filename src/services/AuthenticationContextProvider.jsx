@@ -66,6 +66,7 @@ export default function AuthenticationProvider({ children }) {
     }
 
     function login(email, password) {
+        console.log("test 1")
         return fetch("/login", {
             method: "POST",
             headers: {
@@ -75,12 +76,16 @@ export default function AuthenticationProvider({ children }) {
                 email, password
             })
         })
-            .then(res => res.json())
+            .then(
+                res => {
+                    res.json()
+                    console.log("test 2")
+                })
             .then(async res => {
                 console.log(res)
-                console.log("test 1")
+                console.log("test 3")
                 if (res.token) {   
-                    console.log("test 2") 
+                    console.log("test 4") 
                     await getUserData();
                 }
 
