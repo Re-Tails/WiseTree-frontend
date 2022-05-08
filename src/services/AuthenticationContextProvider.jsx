@@ -78,12 +78,14 @@ export default function AuthenticationProvider({ children }) {
         })
             .then(
                 res => {
+                    console.log("check 1")
+                    console.log(res)
                     res.json()
-                    console.log("test 2")
+                    
                 })
             .then(async res => {
+                console.log("check 2")
                 console.log(res)
-                console.log("test 3")
                 if (res.token) {   
                     console.log("test 4") 
                     await getUserData();
