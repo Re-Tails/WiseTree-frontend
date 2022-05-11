@@ -67,7 +67,7 @@ export default function AuthenticationProvider({ children }) {
 
     function login(email, password) {
         console.log("test 1")
-        return fetch("/login", {
+        return fetch("/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
