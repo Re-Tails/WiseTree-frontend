@@ -67,7 +67,7 @@ export default function AuthenticationProvider({ children }) {
 
     function login(email, password) {
         console.log("test 1")
-        return fetch("https://wisetech-app.herokuapp.com/login", {
+        return fetch("/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
