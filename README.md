@@ -52,16 +52,14 @@ Lint your .js & .jsx files for coding errors/bad practices
 
 Rules can be customized via `.eslintrc` file.
 
-# Docker Details
-If you would like to put a new version into a container, this is listed in the project as Dockerfile. To build this image you can with the command:
+# Publishing to Docker Hub
+Every time a commit is pushed into the main branch of this repository, a GitHub Action workflow will run automatically to build a DOcker image from the latest version of the repository. The progress of this workflow can be seen by navigating to <strong>Actions > Publish to DockerHub</strong>.
 
-docker build --tag wisetreefrontend:XX.XX .
+The Docker repository specified in [docker-publish.yml](/.github/workflows/docker-publish.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Docker repository's `DOCKERHUB_TOKEN` and `DOCKERHUB_USERNAME` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
 
-The docker container for this project can be found from:
+You can find an image of the latest version of this repository at [Docker Hub](https://hub.docker.com/repository/docker/tienlonglam/wisetree-frontend).
 
-https://hub.docker.com/r/justox51/wisetreeapi
-
-or pulled into docker from:
-
-docker pull justox51/wisetreeapi
-
+You can pull an image of the latest version of this repository using
+````
+docker pull tienlonglam/wisetree-frontend
+````
