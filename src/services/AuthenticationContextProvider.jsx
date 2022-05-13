@@ -54,6 +54,7 @@ export default function AuthenticationProvider({ children }) {
 
     function getUserData() {
         return fetch("/userData").then(res => res.json()).then(res => {
+            console.log(res)
             if (res.user) {
                 setUser(() => res.user);
                 return res.user;
@@ -67,6 +68,17 @@ export default function AuthenticationProvider({ children }) {
 
     function login(email, password) {
         console.log("test 1")
+        
+        fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email, password
+            })
+        });
+        
         return fetch("https://wisetech-app.herokuapp.com/login", {
             method: "POST",
             headers: {
@@ -79,7 +91,7 @@ export default function AuthenticationProvider({ children }) {
 
         .then(res => res.json())
         .then(async res => {
-            console.log(res)
+            console.log(res.token)
             if (res.token) {    
                 await getUserData();
             }
