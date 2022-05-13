@@ -53,12 +53,17 @@ export default function AuthenticationProvider({ children }) {
     
 
     function getUserData() {
+        let user2 = {name: 'Hussein El-Husseini', email: 'husseine2985@gmail.com', id: '623ad891dd5bbc276cdefec6', role: 'staff', isModerator: false}
+        setUser(() => user2)
+        return {name: 'Hussein El-Husseini', email: 'husseine2985@gmail.com', id: '623ad891dd5bbc276cdefec6', role: 'staff', isModerator: false}
         return fetch("/userData").then(res => res.json()).then(res => {
             console.log(res)
             if (res.user) {
+                console.log("1")
                 setUser(() => res.user);
                 return res.user;
             } else {
+                console.log("2")
                 setUser(() => null);
                 history.push("/login");
                 return null;
@@ -77,7 +82,7 @@ export default function AuthenticationProvider({ children }) {
             body: JSON.stringify({
                 email, password
             })
-        });
+        })
         
         return fetch("https://wisetech-app.herokuapp.com/login", {
             method: "POST",
@@ -88,9 +93,10 @@ export default function AuthenticationProvider({ children }) {
                 email, password
             })
         })
-
+        
         .then(res => res.json())
         .then(async res => {
+            console.log(res)
             console.log(res.token)
             if (res.token) {    
                 await getUserData();
