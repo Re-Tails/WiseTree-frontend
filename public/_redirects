@@ -1,1 +1,3 @@
 /* /index.html 200
+# proxy to api
+/api/*  https://wisetech-app.herokuapp.com/api/:splat  200
