@@ -69,7 +69,7 @@ export default function AuthenticationProvider({ children }) {
     }
 
     function login(email, password) {
-        console.log("test 1")
+        console.log("before fetch in login function in AuthContext")
         
         fetch("/login", {
             method: "POST",

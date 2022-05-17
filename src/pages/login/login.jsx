@@ -48,7 +48,7 @@ export default function Login() {
 
     // Handle login function
     function handleLogin(e) {
-
+        console.log("start handleLogin in login.jsx")
         setErrorMsg(() => null);
 
         e.preventDefault()
@@ -60,6 +60,7 @@ export default function Login() {
         }
 
         userAuth.login(user.email, user.password).then(res => {
+            console.log("after userAuth.login")
             console.log(res);
             if(res !== "Success"){
                 setErrorMsg(res);
