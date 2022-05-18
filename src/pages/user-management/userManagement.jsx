@@ -55,7 +55,7 @@ function UserManagement(props) {
             setErrorMessage("Error! Please make sure password is not empty.")
             return
         } else {
-            const response = await fetch("/register", {
+            const response = await fetch("https://wisetech-app.herokuapp.com/register", {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache',

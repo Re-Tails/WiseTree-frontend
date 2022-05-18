@@ -53,7 +53,7 @@ export default function AuthenticationProvider({ children }) {
     
 
     function getUserData() {
-        return fetch("/userData").then(res => res.json()).then(res => {
+        return fetch("https://wisetech-app.herokuapp.com/userData", {credentials: 'include'}).then(res => res.json()).then(res => {
             console.log(res)
             if (res.user) {
                 console.log("1")
@@ -71,6 +71,7 @@ export default function AuthenticationProvider({ children }) {
     function login(email, password) {
         console.log("before fetch in login function in AuthContext")
         
+        /*
         fetch("/login", {
             method: "POST",
             headers: {
@@ -80,7 +81,7 @@ export default function AuthenticationProvider({ children }) {
                 email, password
             })
         })
-        /*
+        */
         return fetch("https://wisetech-app.herokuapp.com/login", {
             method: "POST",
             headers: {
@@ -90,11 +91,14 @@ export default function AuthenticationProvider({ children }) {
                 email, password
             })
         })
-        */
         .then(res => res.json())
         .then(async res => {
             console.log(res)
             console.log(res.token)
+            console.log(document.cookie
+                .split('; ')
+                .find(row => row.startsWith("accessToken"))
+                .split('=')[1])
             if (res.token) {    
                 await getUserData();
             }
@@ -105,7 +109,7 @@ export default function AuthenticationProvider({ children }) {
     }
 
     function logout() {
-        fetch("/logout")
+        fetch("https://wisetech-app.herokuapp.com/logout")
             .then(() => setUser(() => null))
             .then(() => {
                 setLogoutMessage("You have been succesfully logged out.")
