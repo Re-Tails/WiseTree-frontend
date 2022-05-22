@@ -53,6 +53,8 @@ export default function AuthenticationProvider({ children }) {
     
 
     function getUserData() {
+        var cors = require('cors');    
+        app.use(cors({credentials: true, origin: 'https://wisetech-app.herokuapp.com'}));
         return fetch("https://wisetech-app.herokuapp.com/userData", {credentials: 'include'}).then(res => res.json()).then(res => {
             console.log(res)
             if (res.user) {
