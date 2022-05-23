@@ -87,6 +87,7 @@ export default function AuthenticationProvider({ children }) {
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: 'include',
             body: JSON.stringify({
                 email, password
             })
@@ -95,10 +96,12 @@ export default function AuthenticationProvider({ children }) {
         .then(async res => {
             console.log(res)
             console.log(res.token)
+            /*
             console.log(document.cookie
                 .split('; ')
                 .find(row => row.startsWith("accessToken"))
                 .split('=')[1])
+                */
             if (res.token) {    
                 await getUserData();
             }
@@ -107,6 +110,7 @@ export default function AuthenticationProvider({ children }) {
         });
 
     }
+
 
     function logout() {
         fetch("https://wisetech-app.herokuapp.com/logout")
