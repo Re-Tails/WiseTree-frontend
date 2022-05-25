@@ -52,8 +52,6 @@ export default function TreeCard(props) {
             .catch((err) => {
                 console.log("err")
                 console.log(err)
-                console.log("res")
-                console.log(res)
                 cogoToast.error('Failed to create new node');
             });
     }
