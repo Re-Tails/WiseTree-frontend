@@ -87,8 +87,8 @@ export default function Login() {
         
                 { errorMsg && <p className="login__login-section-error text-danger">{ errorMsg }</p> }
                 <form className="login__form" onSubmit= {event => handleLogin(event)}>
-                    <input type="email" className="form-control login__email login__input" autoComplete="email" placeholder="Email" defaultValue="husseine2985@gmail.com"/>
-                    <input type="password" className="form-control login__password login__input" autoComplete="password" placeholder="Password" defaultValue="Kogu4sTI"/>
+                    <input type="email" className="form-control login__email login__input" autoComplete="email" placeholder="Email"/>
+                    <input type="password" className="form-control login__password login__input" autoComplete="password" placeholder="Password"/>
                     <button className='login__btn btn' value="Submit">
                         Login
                     </button>
