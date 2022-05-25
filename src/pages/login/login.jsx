@@ -83,7 +83,7 @@ export default function Login() {
                 <h3 className="login__subtitle">Strategy & Tactics Tree</h3>
             </div>
             <div className="login__login-section">
-                <h2 className="login__login-section-title">G'day mate 2!</h2>
+                <h2 className="login__login-section-title">G'day mate!</h2>
         
                 { errorMsg && <p className="login__login-section-error text-danger">{ errorMsg }</p> }
                 <form className="login__form" onSubmit= {event => handleLogin(event)}>
