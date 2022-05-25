@@ -7,20 +7,12 @@ import TreeEditor from './pages/tree-editor/treeEditor';
 
 import AuthenticationProvider from './services/AuthenticationContextProvider';
 
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from '@apollo/react-hooks';
+
+
 
 import './app.scss';
-import { createHttpLink } from 'apollo-link-http';
 
-const link = createHttpLink({
-    uri: "https://wisetech-app.herokuapp.com/graphql",
-    credentials: "include"
-});
 
-const client = new ApolloClient({
-    link
-});
 
 // const client = new ApolloClient({
 //     uri: 'http://localhost:4000/graphql',
@@ -28,7 +20,6 @@ const client = new ApolloClient({
 
 function App() {
     return (
-        <ApolloProvider client={client}>
             <BrowserRouter>
 
                 <AuthenticationProvider>
@@ -54,7 +45,6 @@ function App() {
                 </AuthenticationProvider>
 
             </BrowserRouter>
-        </ApolloProvider>
     );
 }
 
