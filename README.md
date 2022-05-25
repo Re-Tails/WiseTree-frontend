@@ -52,14 +52,36 @@ Lint your .js & .jsx files for coding errors/bad practices
 
 Rules can be customized via `.eslintrc` file.
 
+<<<<<<< Updated upstream
 # Publishing to Docker Hub
 Every time a commit is pushed into the main branch of this repository, a GitHub Action workflow will run automatically to build a DOcker image from the latest version of the repository. The progress of this workflow can be seen by navigating to <strong>Actions > Publish to DockerHub</strong>.
+=======
+### `npm test`
+
+Runs jest to test all custom tests in `test.js` files located under individual folders in the `src/components` folder.
+
+# Docker Details
+If you would like to put a new version into a container, this is listed in the project as Dockerfile. To build this image you can with the command:
+>>>>>>> Stashed changes
 
 The Docker repository specified in [docker-publish.yml](/.github/workflows/docker-publish.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Docker repository's `DOCKERHUB_TOKEN` and `DOCKERHUB_USERNAME` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
 
 You can find an image of the latest version of this repository at [Docker Hub](https://hub.docker.com/repository/docker/tienlonglam/wisetree-frontend).
 
+<<<<<<< Updated upstream
 You can pull an image of the latest version of this repository using
 ````
 docker pull tienlonglam/wisetree-frontend
 ````
+=======
+# Testing Details
+
+For testing jest is used for the writing of the tests themselves. This is supported by the use of Enzyme to facilitate shallow rendering of each tested component.
+
+Configuration of jest can be found under `jest.config.js`. You can run each test through the aforementioned `npm test` command.
+
+In order to find out more about each testing utility you can read the relevant documentation at:
+
+jest: https://jestjs.io/docs/getting-started
+Enzyme: https://enzymejs.github.io/enzyme/docs/api/
+>>>>>>> Stashed changes
