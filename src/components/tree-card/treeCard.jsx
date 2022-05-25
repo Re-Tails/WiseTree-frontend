@@ -36,6 +36,7 @@ export default function TreeCard(props) {
     };
 
     function handleNewCardClick() {
+        console.log("before createNewRootNode")
         createNewRootNode({
             variables: {
                 ownerId: user.id,
@@ -48,7 +49,11 @@ export default function TreeCard(props) {
                 });
                 history.replace(`/tree/${res.data.createRootNode.id}`);
             })
-            .catch(() => {
+            .catch((err) => {
+                console.log("err")
+                console.log(err)
+                console.log("res")
+                console.log(res)
                 cogoToast.error('Failed to create new node');
             });
     }
