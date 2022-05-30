@@ -1,13 +1,13 @@
 name: Publish to DockerHub
 
 on:
-  push:
-    branches:
-      - 'main'
-
+  workflow_run:
+     workflows: ["Test using Jest"]
+     types: [completed]
 jobs:
-  docker:
+  tests-succeeded:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Get current date
         id: date
@@ -33,4 +33,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: tienlonglam/wisetree-frontend:${{ steps.date.outputs.date }}
+          tags: ${{ secrets.DOCKERHUB_REPOSITORY }}:${{ steps.date.outputs.date }}
+  tests-failed:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failed' }}
+    steps:
+      - run: echo "Test with Jest failed"
