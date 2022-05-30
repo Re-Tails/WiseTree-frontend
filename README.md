@@ -57,7 +57,7 @@ Rules can be customized via `.eslintrc` file.
 Runs jest to test all custom tests in `test.js` files located under individual folders in the `src/components` folder.
 
 # Publishing to Docker Hub
-Every time a commit is pushed into the main branch of this repository, a GitHub Action workflow will run automatically to build a DOcker image from the latest version of the repository. The progress of this workflow can be seen by navigating to <strong>Actions > Publish to DockerHub</strong>.
+If Jest tests are completed successfully, the [Publish to DockerHub GitHub Action workflow](/.github/workflows/docker-publish.yml) will run automatically to build a Docker image from the latest version of the repository. The progress of this workflow can be seen by navigating to <strong>Actions > Publish to DockerHub</strong>.
 The Docker repository specified in [docker-publish.yml](/.github/workflows/docker-publish.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Docker repository's `DOCKERHUB_TOKEN` and `DOCKERHUB_USERNAME` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
 
 You can find an image of the latest version of this repository at [Docker Hub](https://hub.docker.com/repository/docker/tienlonglam/wisetree-frontend).
@@ -67,6 +67,12 @@ You can pull an image of the latest version of this repository using
 docker pull tienlonglam/wisetree-frontend
 ````
 
+# Deployment to Netlify
+If Jest tests are completed successfully, the [Netlify GitHub Action workflow](/.github/workflows/netlify.yml) will run automatically to deploy to a Netlify hosting site. The progress of this workflow can be seen by navigating to <strong>Actions > Deploy to Netlify</strong>.
+The Netlify site specified in [netlify.yml](/.github/workflows/netlify.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Netlify's site ID `NETLIFY_SITE_ID` and authentication token `NETLIFY_TOKEN` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
+
+You can find live version of this website at [Netlify](https://warm-piroshki-51679d.netlify.app/).
+
 # Testing Details
 
 For testing jest is used for the writing of the tests themselves. This is supported by the use of Enzyme to facilitate shallow rendering of each tested component.
@@ -75,5 +81,6 @@ Configuration of jest can be found under `jest.config.js`. You can run each test
 
 In order to find out more about each testing utility you can read the relevant documentation at:
 
-jest: https://jestjs.io/docs/getting-started
+Jest: https://jestjs.io/docs/getting-started
+
 Enzyme: https://enzymejs.github.io/enzyme/docs/api/
