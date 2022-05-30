@@ -62,17 +62,18 @@ The Docker repository specified in [docker-publish.yml](/.github/workflows/docke
 
 You can find an image of the latest version of this repository at [Docker Hub](https://hub.docker.com/repository/docker/tienlonglam/wisetree-frontend).
 
+You can pull an image of the latest version of this repository using
+````
+docker pull tienlonglam/wisetree-frontend
+````
+
 # Testing Details
 
 For testing jest is used for the writing of the tests themselves. This is supported by the use of Enzyme to facilitate shallow rendering of each tested component.
 
-Configuration of jest can be found under `jest.config.js`. You can run each test through the aforementioned `npm test` command.
+Configuration of jest can be found under `jest.config.js`. You can run each test through the aforementioned `npm test` command. Tests can be found in each component's folder under the `components` directory, under the files `test.js`. 
 
 In order to find out more about each testing utility you can read the relevant documentation at:
 
 jest: https://jestjs.io/docs/getting-started
 Enzyme: https://enzymejs.github.io/enzyme/docs/api/
-You can pull an image of the latest version of this repository using
-````
-docker pull tienlonglam/wisetree-frontend
-````
