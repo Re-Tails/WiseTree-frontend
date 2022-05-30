@@ -20,4 +20,6 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          CI: "False"
+          NODE_VERSION: "14.19.1"
         run: netlify deploy --dir=public --prod
