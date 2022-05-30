@@ -7,19 +7,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checkout repo
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14.19.1
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build site
         run: npm run build
+        
+      - name: Set Netlify env variable CI
+        run: netlify env:set CI False
+        
+      - name: Set Netlify env variable NODE_VERSION
+        run: netlify env:set NODE_VERSION 14.19.1
 
       # Deploy the site with netlify-cli
       - name: Deploy Site
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-          CI: "False"
-          NODE_VERSION: "14.19.1"
         run: netlify deploy --dir=public --prod
