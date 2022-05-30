@@ -1,10 +1,12 @@
 name: Deploy to Netlify on commits to master
 on:
-  push:
-    branches: [main]
+  workflow_run:
+     workflows: ["Test using Jest"]
+     types: [completed]
 jobs:
-  build:
+  tests-succeeded:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       # Checkout repo
       - uses: actions/checkout@v3
@@ -30,3 +32,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: netlify deploy --prod
+  test-failed:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - run: echo "Test with Jest failed"
