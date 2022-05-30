@@ -58,7 +58,7 @@ Runs jest to test all custom tests in `test.js` files located under individual f
 
 # Publishing to Docker Hub
 If Jest tests are completed successfully, the [Publish to DockerHub GitHub Action workflow](/.github/workflows/docker-publish.yml) will run automatically to build a Docker image from the latest version of the repository. The progress of this workflow can be seen by navigating to <strong>Actions > Publish to DockerHub</strong>.
-The Docker repository specified in [docker-publish.yml](/.github/workflows/docker-publish.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Docker repository's `DOCKERHUB_TOKEN` and `DOCKERHUB_USERNAME` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
+The Docker repository specified in [docker-publish.yml](/.github/workflows/docker-publish.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Docker repository's `DOCKERHUB_REPOSITORY`, `DOCKERHUB_TOKEN` and `DOCKERHUB_USERNAME` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
 
 You can find an image of the latest version of this repository at [Docker Hub](https://hub.docker.com/repository/docker/tienlonglam/wisetree-frontend).
 
