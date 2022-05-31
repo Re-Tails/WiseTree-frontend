@@ -69,7 +69,7 @@ docker pull tienlonglam/wisetree-frontend
 
 # Deployment to Netlify
 If Jest tests are completed successfully, the [Netlify GitHub Action workflow](/.github/workflows/netlify.yml) will run automatically to deploy to a Netlify hosting site. The progress of this workflow can be seen by navigating to <strong>Actions > Deploy to Netlify</strong>.
-The Netlify site specified in [netlify.yml](/.github/workflows/netlify.yml) will be the destination to which the resulting Docker image is pushed. You will also need to save the Netlify's site ID `NETLIFY_SITE_ID` and authentication token `NETLIFY_TOKEN` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
+The Netlify site specified in [netlify.yml](/.github/workflows/netlify.yml) will be the destination to which the resulting image is pushed. You will also need to save the Netlify's site ID `NETLIFY_SITE_ID` and authentication token `NETLIFY_TOKEN` into GitHub Secrets by navigating to <strong>Settings > Secrets > Actions</strong>.
 
 You can find live version of this website at [Netlify](https://warm-piroshki-51679d.netlify.app/).
 
