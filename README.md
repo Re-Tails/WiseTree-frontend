@@ -19,7 +19,7 @@ WiseTree is created for WiseTech to use as an alternative to the pre-existing `S
 
 # Development
 
-## Setting Up
+## Setting Up 
 
 -   Download [NodeJS](https://nodejs.org/en/download/) (This is a runtime for developing and building this project). This will also install npm by default. Confirm by typing `node -v` and `npm -v` in your CLI, the installed version will be printed
 -   Install all node-module dependencies by using the `npm install` command project directory
