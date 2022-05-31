@@ -19,12 +19,6 @@ jobs:
 
       - name: Build site
         run: CI=false npm run build
-        
-      - name: Set Netlify env variable CI
-        run: netlify env:set CI False
-        
-      - name: Set Netlify env variable NODE_VERSION
-        run: netlify env:set NODE_VERSION 14.19.1
 
       # Deploy the site with netlify-cli
       - name: Deploy Site
