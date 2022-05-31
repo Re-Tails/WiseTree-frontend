@@ -34,6 +34,6 @@ jobs:
         run: netlify deploy --prod
   tests-failed:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failed' }}
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - run: echo "Test with Jest failed"
+      - run: echo "Test using Jest failed"
